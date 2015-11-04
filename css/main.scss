@@ -3,24 +3,40 @@
 ---
 @charset "utf-8";
 
+// Font variables
+$font-path: "{{ baseurl }}/assets/fonts/";
 
+@font-face {
+  font-family: "Nord Regular";
+  src: url($font-path + "NordRegular.ttf");
+}
+
+@font-face {
+  font-family: "Nord Bold";
+  src: url($font-path + "NordBold.ttf");
+}
 
 // Our variables
 $base-font-family: Helvetica, Arial, sans-serif;
+$header-font-family: "Nord Regular", $base-font-family;
+$title-font-family: "Nord Bold", $base-font-family;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
 $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
+
 $background-color: #90dffe;
 $brand-color:      #38a3d1;
 
+$black-color:      #2f2f2f;
 $white-color:      #fefefe;
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
+
+$text-color:       $black-color;
 
 $on-palm:          600px;
 $on-laptop:        800px;
@@ -44,7 +60,10 @@ $on-laptop:        800px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "base",
-        "layout",
-        "syntax-highlighting"
+  "base",
+  "layout",
+  "columns",
+  "header",
+  "footer",
+  "syntax-highlighting"
 ;

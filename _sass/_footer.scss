@@ -1,0 +1,21 @@
+/**
+ * Site footer
+ */
+.site-footer {
+  background-color: $black-color;
+  padding: $spacing-unit 0;
+  font-size: 15px;
+  color: $grey-color;
+}
+
+.footer-heading {
+  font-size: 18px;
+  color: $white-color;
+  margin-bottom: $spacing-unit / 2;
+}
+
+.contact-list,
+.social-media-list {
+  list-style: none;
+  margin-left: 0;
+}
