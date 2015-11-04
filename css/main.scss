@@ -17,7 +17,7 @@ $font-path: "{{ baseurl }}/assets/fonts/";
 }
 
 // Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-family: "Open Sans", Helvetica, Arial, sans-serif;
 $header-font-family: "Nord Regular", $base-font-family;
 $title-font-family: "Nord Bold", $base-font-family;
 $base-font-size:   16px;
@@ -60,10 +60,12 @@ $on-laptop:        800px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
+  url("http://fonts.googleapis.com/css?family=Open+Sans"),
   "base",
-  "layout",
   "columns",
+  "paper",
   "header",
   "footer",
+  "layout",
   "syntax-highlighting"
 ;
