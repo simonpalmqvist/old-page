@@ -1,39 +1,44 @@
+/**
+ * Paper looking box
+ * Inspiration from http://www.sitepoint.com/pure-css3-paper-curls/
+ */
+
 @mixin skewAndRotate($value) {
-  -webkit-transform: skew($value) rotate($value);
-  -moz-transform: skew($value) rotate($value);
-  -ms-transform: skew($value) rotate($value);
-  -o-transform: skew($value) rotate($value);
-  transform: skew($value) rotate($value);
+    -webkit-transform: skew($value) rotate($value);
+    -moz-transform: skew($value) rotate($value);
+    -ms-transform: skew($value) rotate($value);
+    -o-transform: skew($value) rotate($value);
+    transform: skew($value) rotate($value);
 }
 
 
 @mixin getPaper() {
-  margin: 0 auto $spacing-unit auto;
-  padding: $spacing-unit;
-  background-color: $white-color;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
-  position: relative;
+    margin: 0 auto $spacing-unit auto;
+    padding: $spacing-unit;
+    background-color: $white-color;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2), inset 0 0 50px rgba(0, 0, 0, 0.1);
+    position: relative;
 
-  &:before,
-  &:after {
-    position: absolute;
-    width: 40%;
-    height: 10px;
-    content: "";
-    bottom: 12px;
-    background: transparent;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    z-index:-1;
-  }
+    &:before,
+    &:after {
+        position: absolute;
+        width: 40%;
+        height: 10px;
+        content: "";
+        bottom: 12px;
+        background: transparent;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        z-index:-1;
+    }
 
-  &:before {
-    left: 12px;
-    @include skewAndRotate(-5deg);
-  }
+    &:before {
+        left: 12px;
+        @include skewAndRotate(-5deg);
+    }
 
-  &:after {
-    right: 12px;
-    @include skewAndRotate(5deg);
-  }
+    &:after {
+        right: 12px;
+        @include skewAndRotate(5deg);
+    }
 
 }

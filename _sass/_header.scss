@@ -3,96 +3,96 @@
  */
 
 .site-header {
-  padding-top: 5px;
-  padding-bottom: 5px;
-  min-height: 56px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    min-height: 56px;
 
-  // Positioning context for the mobile navigation icon
-  position: relative;
+    // Positioning context for the mobile navigation icon
+    position: relative;
 }
 
 .site-title {
-  font-family: $title-font-family;
-  font-size: 24px;
-  letter-spacing: 3px;
-  margin: 10px 0;
-  float: left;
+    font-family: $title-font-family;
+    font-size: 24px;
+    letter-spacing: 3px;
+    margin: 10px 0;
+    float: left;
 
-  &,
-  &:visited {
-    color: $white-color;
-  }
+    &,
+    &:visited {
+        color: $white-color;
+    }
 
 }
 
 .site-nav {
-  float: right;
-  margin: 20px 0;
-
-  .menu-icon {
-    display: none;
-  }
-
-  .page-link {
-    color: $white-color;
-    line-height: $base-line-height;
-
-    // Gaps between nav items, but not on the first one
-    &:not(:first-child) {
-      margin-left: 20px;
-    }
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-
-  @include media-query($on-palm) {
-    position: absolute;
-    top: 0px;
-    right: $spacing-unit / 2;
-    background-color: $white-color;
-    border-radius: 20px;
-    text-align: right;
+    float: right;
+    margin: 20px 0;
 
     .menu-icon {
-      display: block;
-      float: right;
-      width: 36px;
-      height: 26px;
-      line-height: 0;
-      padding-top: 10px;
-      text-align: center;
-
-      > svg {
-        width: 18px;
-        height: 15px;
-
-        path {
-          fill: $background-color;
-        }
-      }
-    }
-
-    .trigger {
-      clear: both;
-      display: none;
-    }
-
-    &:hover .trigger {
-      display: block;
-      padding-bottom: 5px;
+        display: none;
     }
 
     .page-link {
-      display: block;
-      padding: 5px 40px;
+        color: $white-color;
+        line-height: $base-line-height;
+
+        // Gaps between nav items, but not on the first one
+        &:not(:first-child) {
+            margin-left: 20px;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
     }
 
-    a,
-    a:visited,
-    a:hover {
-      color: $text-color;
+    @include media-query($on-palm) {
+        position: absolute;
+        top: 0px;
+        right: $spacing-unit / 2;
+        background-color: $white-color;
+        border-radius: 20px;
+        text-align: right;
+
+        .menu-icon {
+            display: block;
+            float: right;
+            width: 36px;
+            height: 26px;
+            line-height: 0;
+            padding-top: 10px;
+            text-align: center;
+
+            > svg {
+                width: 18px;
+                height: 15px;
+
+                path {
+                    fill: $background-color;
+                }
+            }
+        }
+
+        .trigger {
+            clear: both;
+            display: none;
+        }
+
+        &:hover .trigger {
+            display: block;
+            padding-bottom: 5px;
+        }
+
+        .page-link {
+            display: block;
+            padding: 5px 40px;
+        }
+
+        a,
+        a:visited,
+        a:hover {
+            color: $text-color;
+        }
     }
-  }
 }

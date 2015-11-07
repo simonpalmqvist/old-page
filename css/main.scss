@@ -7,13 +7,13 @@
 $font-path: "{{ baseurl }}/assets/fonts/";
 
 @font-face {
-  font-family: "Nord Regular";
-  src: url($font-path + "NordRegular.ttf");
+    font-family: "Nord Regular";
+    src: url($font-path + "NordRegular.ttf");
 }
 
 @font-face {
-  font-family: "Nord Bold";
-  src: url($font-path + "NordBold.ttf");
+    font-family: "Nord Bold";
+    src: url($font-path + "NordBold.ttf");
 }
 
 // Our variables
@@ -60,12 +60,12 @@ $on-laptop:        800px;
 
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-  url("http://fonts.googleapis.com/css?family=Open+Sans"),
-  "base",
-  "columns",
-  "paper",
-  "header",
-  "footer",
-  "layout",
-  "syntax-highlighting"
+    url("http://fonts.googleapis.com/css?family=Open+Sans"),
+    "base",
+    "columns",
+    "paper",
+    "header",
+    "footer",
+    "layout",
+    "syntax-highlighting"
 ;

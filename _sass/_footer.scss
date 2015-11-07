@@ -2,20 +2,29 @@
  * Site footer
  */
 .site-footer {
-  background-color: $black-color;
-  padding: $spacing-unit 0;
-  font-size: 15px;
-  color: $grey-color;
+    background-color: $black-color;
+    padding: $spacing-unit 0;
+    font-size: 15px;
+    color: $grey-color;
+
+    a {
+        &:visited {
+            color: $brand-color;
+        }
+        &:hover {
+            color: lighten($brand-color, 10%);
+        }
+    }
 }
 
 .footer-heading {
-  font-size: 18px;
-  color: $white-color;
-  margin-bottom: $spacing-unit / 2;
+    font-size: 18px;
+    color: $white-color;
+    margin-bottom: $spacing-unit / 2;
 }
 
 .contact-list,
 .social-media-list {
-  list-style: none;
-  margin-left: 0;
+    list-style: none;
+    margin-left: 0;
 }

@@ -11,9 +11,11 @@
     </header>
 
     <article class="post-content">
-        {% if truncLimit and post.content.size > truncLimit %}
-            {{ post.content | truncate:truncLimit | "..." }}
-            <a href="{{ post.url | prepend: site.baseurl }}">Read more</a>
+        {% if truncLimit %}
+            {{ post.content | truncate: truncLimit | "..." }}
+            <a class="read-more" href="{{ post.url | prepend: site.baseurl }}">Read more</a>
+        {% elsif content %}
+            {{ content }}
         {% else %}
             {{ post.content }}
         {% endif %}
