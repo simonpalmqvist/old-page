@@ -1,12 +1,20 @@
 ---
 layout: default
 title: Blog
-permalink: /blog/
 priority: 1
 ---
 {% assign truncLimit = 100 %}
 <ul class="post-list">
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
     {% include showPost.html %}
     {% endfor %}
 </ul>
+
+{% if paginator.next_page_path %}
+<a class="arrow-link-right" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Next</a>
+{% endif %}
+
+{% if paginator.previous_page_path %}
+<a class="arrow-link-left" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Previous</a>
+{% endif %}
+

@@ -2,7 +2,7 @@
 title: simonpalmqvist
 email: simon.palmqvist@gmail.com
 description: >
-  I'm a developer, designer & beer brewer.
+  Developer, designer & beer brewer.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://yourdomain.com" # the base hostname & protocol for your site
 twitter_username: simonpalmqvist
@@ -10,4 +10,5 @@ github_username:  simonpalmqvist
 
 # Build settings
 markdown: kramdown
-paginate: 10
+paginate: 2
+paginate_path: "/blog/page:num/"
