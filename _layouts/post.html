@@ -3,3 +3,12 @@ layout: default
 ---
 {% assign post = page %}
 {% include showPost.html %}
+
+{% if page.previous %}
+    <a class="arrow-link-right" href="{{ page.previous.url | prepend: site.baseurl }}">Previous</a>
+{% endif %}
+
+{% if page.next %}
+    <a class="arrow-link-left" href="{{ page.next.url | prepend: site.baseurl }}">Next</a>
+{% endif %}
+

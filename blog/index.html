@@ -1,9 +1,12 @@
 ---
 layout: default
+title: Blog
+permalink: /blog/
+priority: 1
 ---
 {% assign truncLimit = 100 %}
 <ul class="post-list">
     {% for post in site.posts %}
-        {% include showPost.html %}
+    {% include showPost.html %}
     {% endfor %}
 </ul>

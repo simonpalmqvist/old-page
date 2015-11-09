@@ -88,3 +88,35 @@
         font-weight: 400;
     }
 }
+
+.arrow-link-left,
+.arrow-link-right {
+    display: inline-block;
+    color: $white-color !important;
+    font-family: $title-font-family;
+    letter-spacing: 3px;
+    font-weight: 400;
+    font-size: 22px;
+    text-align: center;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+}
+
+.arrow-link-right {
+    float: right;
+
+    &:after {
+        content: " >";
+    }
+}
+
+.arrow-link-left {
+    float: left;
+
+    &:before {
+        content: "< ";
+    }
+}
