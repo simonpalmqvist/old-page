@@ -18,7 +18,9 @@
 }
 
 .footer-heading {
-    font-size: 18px;
+    font-size: 22px;
+    font-family: $title-font-family;
+    letter-spacing: 3px;
     color: $white-color;
     margin-bottom: $spacing-unit / 2;
 }

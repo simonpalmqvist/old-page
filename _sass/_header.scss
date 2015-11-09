@@ -3,8 +3,7 @@
  */
 
 .site-header {
-    padding-top: 5px;
-    padding-bottom: 5px;
+    padding: 7px 0;
     min-height: 56px;
 
     // Positioning context for the mobile navigation icon
@@ -12,22 +11,33 @@
 }
 
 .site-title {
-    font-family: $title-font-family;
-    font-size: 24px;
-    letter-spacing: 3px;
+
     margin: 10px 0;
     float: left;
 
-    &,
-    &:visited {
-        color: $white-color;
+    .title {
+        display: inline-block;
+        margin-left:10px;
+        font-family: $title-font-family;
+        letter-spacing: 3px;
+        font-size: 28px;
+
+        &,
+        &:visited {
+            color: $white-color;
+        }
+
+        @include media-query(400px) {
+            display: none;
+        }
+
     }
 
 }
 
 .site-nav {
     float: right;
-    margin: 20px 0;
+    margin: 17px 0;
 
     .menu-icon {
         display: none;
@@ -35,25 +45,30 @@
 
     .page-link {
         color: $white-color;
-        line-height: $base-line-height;
+        font-family: $title-font-family;
+        letter-spacing: 3px;
+        font-weight: 400;
+        font-size: 22px;
 
         // Gaps between nav items, but not on the first one
         &:not(:first-child) {
-            margin-left: 20px;
+            margin-left: $spacing-unit * 2;
         }
 
         &:hover {
-            text-decoration: underline;
+            padding-bottom:1px;
+            border-bottom: 2px solid $white-color;
         }
     }
 
     @include media-query($on-palm) {
         position: absolute;
-        top: 0px;
+        top: 0;
         right: $spacing-unit / 2;
         background-color: $white-color;
         border-radius: 20px;
         text-align: center;
+        border: 1px dashed $grey-color-light;
         z-index: 200;
 
         .menu-icon {
@@ -80,10 +95,6 @@
             display: none;
         }
 
-        &:hover {
-            border: 1px dashed $grey-color-light;
-        }
-
         &:hover .trigger {
             display: block;
             padding-bottom: 5px;
@@ -92,8 +103,12 @@
 
         .page-link {
             display: block;
-            padding: 5px 40px;
+            padding: 5px 40px !important;
             margin: 0 !important;
+
+            &:hover {
+                border: none;
+            }
 
         }
 

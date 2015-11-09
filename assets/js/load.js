@@ -1,4 +1,4 @@
-$(window).load(function() {
+window.onload(function() {
     var windowHeight = $(window).height();
     var bodyHeight = $("body").height();
 
