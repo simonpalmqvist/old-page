@@ -2,6 +2,7 @@
 layout: post
 title:  "Some testing with filtering"
 date:   2015-11-04 20:14:00
+type: "article"
 author: simonpalmqvist
 categories: programming
 ---

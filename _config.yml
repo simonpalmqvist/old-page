@@ -4,9 +4,10 @@ email: simon.palmqvist@gmail.com
 description: >
   Developer, designer & beer brewer.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://yourdomain.com" # the base hostname & protocol for your site
+url: "https://simonpalmqvist.github.io" # the base hostname & protocol for your site
 twitter_username: simonpalmqvist
 github_username:  simonpalmqvist
+logo: "/assets/images/logo.png"
 
 # Build settings
 markdown: kramdown

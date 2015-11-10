@@ -1,6 +1,7 @@
 ---
 layout: post
 title:  "My first blog post!"
+type: "article"
 date:   2015-11-03 19:27:00
 author: simonpalmqvist
 categories: programming

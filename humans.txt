@@ -1,3 +1,7 @@
+---
+layout: null
+---
+
 Me: Simon Palmqvist
 Twitter: simonpalmqvist
 Github: simonpalmqvist
