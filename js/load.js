@@ -1,6 +1,3 @@
----
----
-
 function loadDiscuss() {
     var disqus_config = function () {
         //var disqus_developer = 1;
@@ -13,23 +10,25 @@ function loadDiscuss() {
 
         s.src = '//simonpalmqvist.disqus.com/embed.js';
 
-        s.setAttribute('data-timestamp', +new Date());
+        s.setAttribute('data-timestamp', + new Date());
         (d.head || d.body).appendChild(s);
 
     })();
 };
 
+function moveFooterAfter(mutation) {
+    $(mutation[0].addedNodes[0]).load(moveFooter);
+}
+
 function moveFooter() {
     var body = $("body");
     var footer = $(".site-footer");
-    var bodyHeight = body.outerHeight();
-    var windowHeight = $(window).innerHeight();
-    console.log(bodyHeight);
+    var bodyHeight = body.height();
+    var windowHeight = $(window).height();
+
     if (footer.hasClass("move")) {
         bodyHeight += footer.outerHeight();
     }
-
-    console.log(windowHeight, bodyHeight);
 
     if ( bodyHeight < windowHeight) {
         body.addClass("fullscreen");
@@ -46,11 +45,6 @@ function moveFooter() {
 
 
 
-function moveFooterAfter(mutation) {
-    $(mutation[0].addedNodes[0]).load(moveFooter);
-}
-
-
 $(window).load(function() {
     if ($("#disqus_thread").length) {
         loadDiscuss();
@@ -63,6 +57,6 @@ $(window).load(function() {
         observer.observe(document.body, observerConfig);
     }
 
-
     moveFooter();
+
 });
