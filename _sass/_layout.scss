@@ -98,6 +98,11 @@
     font-size: 22px;
     text-align: center;
 
+    &.center {
+        display: block;
+        width: 100%;
+    }
+
     &:hover {
         text-decoration: underline;
     }

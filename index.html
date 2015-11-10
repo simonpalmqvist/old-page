@@ -1,5 +1,6 @@
 ---
 layout: default
+comments: true
 ---
 
 <div class="home">
@@ -8,6 +9,8 @@ layout: default
         {% include showPost.html %}
     {% endfor %}
 
-    <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+    <a  class="white-link center" href="{{ "/feed.xml" | prepend: site.baseurl }}">
+        subscribe via RSS
+    </a>
 
 </div>

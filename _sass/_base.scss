@@ -11,12 +11,13 @@ dl, dd, ol, ul, figure {
 /**
 * Basic styling
 */
+
 body {
     font-family: $base-font-family;
     font-size: $base-font-size;
     line-height: $base-line-height;
     color: $text-color;
-    background: linear-gradient(to bottom, $background-color 0%, $brand-color 100%);
+    background: linear-gradient(to top, $background-color 0%, $brand-color 100%);
     -webkit-text-size-adjust: 100%;
 }
 
