@@ -3,7 +3,7 @@
 
 function loadDiscuss() {
     var disqus_config = function () {
-        var disqus_developer = 1;
+        //var disqus_developer = 1;
         this.page.shortname = "sp222kh";
         this.page.identifier = "{{ page.url }}";
     };
