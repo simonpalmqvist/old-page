@@ -3,7 +3,7 @@ layout: default
 title: Blog
 priority: 1
 ---
-{% assign truncLimit = 100 %}
+{% assign truncLimit = 300 %}
 <ul class="post-list">
     {% for post in paginator.posts %}
         {% include showPost.html %}
@@ -11,10 +11,10 @@ priority: 1
 </ul>
 
 {% if paginator.next_page_path %}
-    <a class="arrow-link-right" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Next</a>
+    <a class="white-link arrow-right" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Next</a>
 {% endif %}
 
 {% if paginator.previous_page_path %}
-    <a class="arrow-link-left" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Previous</a>
+    <a class="white-link arrow-left" href="{{ paginator.previous_page_path | prepend: site.baseurl }}">Previous</a>
 {% endif %}
 

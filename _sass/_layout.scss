@@ -89,8 +89,7 @@
     }
 }
 
-.arrow-link-left,
-.arrow-link-right {
+.white-link {
     display: inline-block;
     color: $white-color !important;
     font-family: $title-font-family;
@@ -103,20 +102,21 @@
         text-decoration: underline;
     }
 
-}
+    &.arrow-right {
+        float: right;
 
-.arrow-link-right {
-    float: right;
+        &:after {
+            content: " >";
+        }
+    }
 
-    &:after {
-        content: " >";
+    &.arrow-left {
+        float: left;
+
+        &:before {
+            content: "< ";
+        }
     }
 }
 
-.arrow-link-left {
-    float: left;
 
-    &:before {
-        content: "< ";
-    }
-}
