@@ -9,3 +9,7 @@ type: "website"
 This site is currently under construction.
 
 If you like to know more please check the blog section.
+
+{% for beer in site.beers %} 
+    {{ beer.title }}
+{% endfor %}

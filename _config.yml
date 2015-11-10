@@ -13,3 +13,5 @@ logo: "/assets/images/logo.png"
 markdown: kramdown
 paginate: 2
 paginate_path: "/blog/page:num/"
+collections:
+  - beers
