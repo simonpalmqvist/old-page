@@ -15,7 +15,7 @@
     @include getPaper();
 
     @include media-query($on-palm) {
-        padding:$spacing-unit $spacing-unit / 2;
+        padding:$spacing-unit $half-spacing-unit;
     }
 }
 

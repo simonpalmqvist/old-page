@@ -1,4 +1,8 @@
-window.onload(function() {
+---
+---
+
+$(window).load(function() {
+
     var windowHeight = $(window).height();
     var bodyHeight = $("body").height();
 
@@ -6,3 +10,5 @@ window.onload(function() {
         $("footer").css("margin-top", windowHeight - bodyHeight);
     }
 });
+
+console.log("what");

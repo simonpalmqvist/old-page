@@ -14,10 +14,11 @@
 
             <div class="trigger">
                 {% assign pages = site.pages | sort:"priority"  %}
+
                 {% for page in pages %}
-                {% unless page.dir contains "/blog/page" or page.title == empty %}
-                <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-                {% endunless %}
+                    {% unless page.title == null or page.dir contains "/blog/page" %}
+                        <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
+                    {% endunless %}
                 {% endfor %}
             </div>
         </nav>
