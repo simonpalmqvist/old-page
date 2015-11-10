@@ -11,7 +11,6 @@ dl, dd, ol, ul, figure {
 /**
 * Basic styling
 */
-
 body {
     font-family: $base-font-family;
     font-size: $base-font-size;
@@ -19,7 +18,16 @@ body {
     color: $text-color;
     background: linear-gradient(to top, $background-color 0%, $brand-color 100%);
     -webkit-text-size-adjust: 100%;
+
+    &.fullscreen {
+        height: 100%;
+        margin: 0;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
 }
+
+
 
 /**
 * Set `margin-bottom` to maintain vertical rhythm

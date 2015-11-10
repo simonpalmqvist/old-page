@@ -20,25 +20,49 @@ function loadDiscuss() {
 };
 
 function moveFooter() {
-    var windowHeight = $(window).height();
-    var bodyHeight = $("body").height();
+    var body = $("body");
+    var footer = $(".site-footer");
+    var bodyHeight = body.outerHeight();
+    var windowHeight = $(window).innerHeight();
+    console.log(bodyHeight);
+    if (footer.hasClass("move")) {
+        bodyHeight += footer.outerHeight();
+    }
+
+    console.log(windowHeight, bodyHeight);
 
     if ( bodyHeight < windowHeight) {
-        $(".site-footer").css("margin-top", windowHeight - bodyHeight);
+        body.addClass("fullscreen");
+        footer.addClass("move");
     } else if (bodyHeight > windowHeight) {
-        $(".site-footer").css("margin-top", 0);
+        body.removeClass("fullscreen");
+        footer.removeClass("move");
+
+        if(this.constructor === MutationObserver) {
+            this.disconnect();
+        }
     }
+}
+
+
+
+function moveFooterAfter(mutation) {
+    $(mutation[0].addedNodes[0]).load(moveFooter);
 }
 
 
 $(window).load(function() {
     if ($("#disqus_thread").length) {
         loadDiscuss();
-        $(".post-footer").bind("DOMSubtreeModified", function() {
-            moveFooter();
-        });
+        var observer = new MutationObserver(moveFooterAfter);
+
+        var observerConfig = {
+            childList: true
+        };
+
+        observer.observe(document.body, observerConfig);
     }
+
 
     moveFooter();
 });
-

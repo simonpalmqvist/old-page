@@ -15,6 +15,12 @@
             color: lighten($brand-color, 10%);
         }
     }
+
+    &.move {
+        position:absolute;
+        bottom: 0px;
+        width: 100%;
+    }
 }
 
 .footer-heading {
