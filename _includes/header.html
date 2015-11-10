@@ -16,7 +16,7 @@
                 {% assign pages = site.pages | sort:"priority"  %}
 
                 {% for page in pages %}
-                    {% unless page.title == null or page.dir contains "/blog/page" %}
+                    {% unless page.title == null or page.dir contains "/blog/page" or page.url == "/index.html" %}
                         <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
                     {% endunless %}
                 {% endfor %}

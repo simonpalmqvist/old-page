@@ -4,7 +4,7 @@ title: Blog
 type: "blog"
 priority: 1
 ---
-{% assign truncLimit = 300 %}
+{% assign truncLimit = 20 %}
 <ul class="post-list">
     {% for post in paginator.posts %}
         {% include showPost.html %}

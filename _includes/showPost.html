@@ -12,12 +12,10 @@
 
     <article class="post-content">
         {% if truncLimit %}
-            {{ post.content | truncate: truncLimit | "..." }}
+            {{ post.content | truncatewords: truncLimit | "..." }}
             <a class="read-more" href="{{ post.url | prepend: site.baseurl }}">Read more</a>
-        {% elsif content %}
-            {{ content }}
         {% else %}
-            {{ post.content }}
+            {{ content }}
         {% endif %}
     </article>
 
