@@ -32,7 +32,8 @@
         width: 100%;
     }
 
-    &:hover {
+    &:hover,
+    &:focus {
         /*color:transparent;*/
         color: $white-color;
         background-color: rgba(0,0,0, 0.6);
