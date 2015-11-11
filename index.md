@@ -4,7 +4,7 @@ title: Me and my site
 type: "website"
 ---
 
-![Room that needs renovating]({{ site.url }}/assets/images/build.jpg)
+![Room that needs renovating]({{ site.baseurl }}/assets/images/build.jpg)
 
 This site is currently under construction.
 

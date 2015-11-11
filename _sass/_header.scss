@@ -52,7 +52,7 @@
 
         // Gaps between nav items, but not on the first one
         &:not(:first-child) {
-            margin-left: $spacing-unit * 2;
+            margin-left: $spacing-unit * 1.5;
         }
 
         &:hover {

@@ -12,8 +12,8 @@ priority: 2
 
         <div class="col col-1-4 mobile">
             <div class="beer-overview">
-                <img src="{{ beer.img | prepend: site.url }}" alt="{{ beer.title}}">
-                <a class="beer-link" href="{{ beer.url | prepend: site.url }}"><span>Read more</span></a>
+                <img src="{{ beer.img | prepend: site.baseurl }}" alt="{{ beer.title }}">
+                <a class="beer-link" href="{{ beer.url | prepend: site.baseurl }}"><span>Read more</span></a>
             </div>
         </div>
 
