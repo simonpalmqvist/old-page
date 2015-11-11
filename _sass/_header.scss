@@ -68,7 +68,6 @@
         background-color: $white-color;
         border-radius: 20px;
         text-align: center;
-        border: 1px dashed $grey-color-light;
         z-index: 200;
 
         .menu-icon {
@@ -98,6 +97,7 @@
         &:hover .trigger {
             display: block;
             padding-bottom: 5px;
+            border: 1px dashed $grey-color-light;
 
         }
 

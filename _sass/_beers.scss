@@ -1,8 +1,9 @@
 .beer-overview {
     @include getPaper();
+    margin-bottom: 0;
 
     @include media-query($on-palm) {
-        padding:$half-spacing-unit $half-spacing-unit;
+        padding: $half-spacing-unit $half-spacing-unit;
     }
     text-align: center;
 
@@ -21,6 +22,8 @@
     bottom: 0;
     color: transparent;
     text-align: center;
+    font-family: $title-font-family;
+    font-size: 20px;
 
     span {
         display: block;
@@ -32,8 +35,42 @@
     &:hover {
         /*color:transparent;*/
         color: $white-color;
+        background-color: rgba(0,0,0, 0.6);
+
+
+    }
+    -webkit-transition: all 0.7s ease;
+    -moz-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
+
+.beer-title {
+    text-align: center;
+
+    &.type {
+        @extend h2;
+        display: block;
         font-family: $title-font-family;
-        font-size: 20px;
-        background-color: rgba(0,0,0, 0.4);
+        font-style: italic;
+        padding-bottom: $half-spacing-unit;
+        border-bottom: 1px solid $grey-color-light;
+    }
+
+}
+
+.beer-img {
+    height:400px;
+    position:relative;
+    overflow: hidden;
+
+    img {
+        margin-top: -400px;
+        display: inline-block;
+        max-height: 800px;
+
+    }
+
+    @include media-query($on-small-palm) {
+        text-align: center;
     }
 }

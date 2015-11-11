@@ -12,6 +12,10 @@
         margin-bottom: $half-spacing-unit;
         margin-left: $half-spacing-unit;
 
+        &.right {
+            float: right;
+        }
+
         &.col-1-4 {
             @include calc-width(25%, $half-spacing-unit);
         }
@@ -32,7 +36,7 @@
                 }
             }
 
-            @include media-query($on-palm) {
+            @include media-query($on-small-palm) {
                 &.col {
                     float: none;
                     @include calc-width(100%, $half-spacing-unit);

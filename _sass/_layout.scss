@@ -47,41 +47,42 @@
     margin-bottom: $spacing-unit;
 }
 
-.post-title {
+h1 {
     font-size: 38px;
 
     @include media-query($on-laptop) {
-        font-size: 30px;
+        font-size: 34px;
     }
 }
+
+h2 {
+    font-size: 32px;
+
+    @include media-query($on-laptop) {
+        font-size: 28px;
+    }
+}
+
+h3 {
+    font-size: 26px;
+
+    @include media-query($on-laptop) {
+        font-size: 22px;
+    }
+}
+
+h4 {
+    font-size: 20px;
+
+    @include media-query($on-laptop) {
+        font-size: 18px;
+    }
+}
+
 
 .post-content {
 
     @extend %clearfix;
-
-    h2 {
-        font-size: 32px;
-
-        @include media-query($on-laptop) {
-            font-size: 28px;
-        }
-    }
-
-    h3 {
-        font-size: 26px;
-
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
-    }
-
-    h4 {
-        font-size: 20px;
-
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
-    }
 
     .read-more {
         padding-top: $half-spacing-unit;
