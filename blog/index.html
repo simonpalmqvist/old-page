@@ -5,11 +5,11 @@ type: "blog"
 priority: 1
 ---
 {% assign truncLimit = 20 %}
-<ul class="post-list">
-    {% for post in paginator.posts %}
-        {% include showPost.html %}
-    {% endfor %}
-</ul>
+
+{% for post in paginator.posts %}
+    {% include showPost.html %}
+{% endfor %}
+
 
 {% if paginator.next_page_path %}
     <a class="white-link arrow-right" href="{{ paginator.next_page_path | prepend: site.baseurl }}">Next</a>

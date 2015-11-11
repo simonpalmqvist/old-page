@@ -14,7 +14,7 @@ $spacing-unit:     30px;
 $half-spacing-unit: $spacing-unit / 2;
 
 
-$background-color: #90dffe;
+$background-color: #87d2ef;
 $brand-color:      #38a3d1;
 
 $black-color:      #2f2f2f;
@@ -27,6 +27,7 @@ $text-color:       $black-color;
 
 $on-palm:          600px;
 $on-laptop:        800px;
+$max-page-size:    900px;
 
 
 
@@ -55,5 +56,6 @@ $on-laptop:        800px;
     "header",
     "footer",
     "layout",
+    "beers",
     "syntax-highlighting"
 ;

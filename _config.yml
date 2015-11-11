@@ -4,7 +4,8 @@ email: simon.palmqvist@gmail.com
 description: >
   Developer, designer & beer brewer.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://simonpalmqvist.github.io" # the base hostname & protocol for your site
+#url: "https://simonpalmqvist.github.io" # the base hostname & protocol for your site
+url: "http://localhost:4000"
 twitter_username: simonpalmqvist
 github_username:  simonpalmqvist
 logo: "/assets/images/logo.png"
@@ -14,4 +15,6 @@ markdown: kramdown
 paginate: 2
 paginate_path: "/blog/page:num/"
 collections:
-  - beers
+  beers:
+      output: true
+      permalink: "/beer/:name/"

@@ -1,0 +1,39 @@
+.beer-overview {
+    @include getPaper();
+
+    @include media-query($on-palm) {
+        padding:$half-spacing-unit $half-spacing-unit;
+    }
+    text-align: center;
+
+
+    img {
+        max-height: 400px;
+    }
+}
+
+.beer-link {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    color: transparent;
+    text-align: center;
+
+    span {
+        display: block;
+        position: absolute;
+        top: 50%;
+        width: 100%;
+    }
+
+    &:hover {
+        /*color:transparent;*/
+        color: $white-color;
+        font-family: $title-font-family;
+        font-size: 20px;
+        background-color: rgba(0,0,0, 0.4);
+    }
+}

@@ -1,0 +1,13 @@
+---
+layout: default
+---
+{{page}}
+
+{% if page.previous %}
+    <a class="white-link arrow-right" href="{{ page.previous.url | prepend: site.baseurl }}">Previous</a>
+{% endif %}
+
+{% if page.next %}
+    <a class="white-link arrow-left" href="{{ page.next.url | prepend: site.baseurl }}">Next</a>
+{% endif %}
+

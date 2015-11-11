@@ -1,0 +1,21 @@
+---
+layout: default
+title: Beer
+permalink: /beer/
+priority: 2
+---
+
+
+<div class="col-wrapper">
+    {% assign beers = site.beers | sort:"brewdate" | reverse %}
+    {% for beer in beers %}
+
+        <div class="col col-1-4 mobile">
+            <div class="beer-overview">
+                <img src="{{ beer.img | prepend: site.url }}" alt="{{ beer.title}}">
+                <a class="beer-link" href="{{ beer.url | prepend: site.url }}"><span>Read more</span></a>
+            </div>
+        </div>
+
+    {% endfor %}
+</div>
