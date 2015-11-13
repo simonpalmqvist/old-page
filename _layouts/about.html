@@ -1,0 +1,16 @@
+---
+layout: page
+---
+<div class="col-wrapper">
+    <div class="col col-1-2 profile-img right">
+        <div>
+            <img src="{{ site.creator_img | prepend: site.baseurl }}" alt="{{ site.creator }}">
+        </div>
+    </div>
+    <div class="col col-1-2">
+        <article class="post-content">
+            {{ content }}
+        </article>
+    </div>
+</div>
+

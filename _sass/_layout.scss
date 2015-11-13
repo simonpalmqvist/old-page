@@ -72,10 +72,12 @@ h3 {
 }
 
 h4 {
-    font-size: 20px;
+    font-size: 18px;
+    margin-bottom: 5px;
+    border-bottom: 1px solid $grey-color-light;
 
     @include media-query($on-laptop) {
-        font-size: 18px;
+        font-size: 16px;
     }
 }
 
@@ -134,4 +136,37 @@ h4 {
     }
 }
 
+.profile-img {
+    div {
+        margin: 0 auto;
+        position: relative;
+        width: 100%;
+        padding-bottom: 240px;
+        max-width: 240px;
+        border-radius: 50%;
+
+        img {
+            position:absolute;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            border-radius: 50%;
+        }
+
+        &:after {
+            border-radius:50%;
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            -moz-box-shadow: inset 0 0 8px rgba(100,100,100,.6);
+            -webkit-box-shadow: inset 0 0 8px rgba(100,100,100,.6);
+            box-shadow: inset 0 0px 10px rgba(100,100,100,.6);
+        }
+
+    }
+}
 

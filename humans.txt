@@ -2,7 +2,7 @@
 layout: null
 ---
 
-Me: Simon Palmqvist
-Twitter: simonpalmqvist
-Github: simonpalmqvist
-Location: Berlin, Germany
+Me: {{ site.creator }}
+Twitter: {{ site.twitter_username }}
+Github: {{ site.twitter_username }}
+Location: {{ site.creator_location }}

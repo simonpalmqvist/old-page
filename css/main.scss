@@ -20,7 +20,7 @@ $brand-color:      #38a3d1;
 $black-color:      #2f2f2f;
 $white-color:      #fefefe;
 $grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 30%);
+$grey-color-light: lighten($grey-color, 40%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 $text-color:       $black-color;
@@ -28,7 +28,7 @@ $text-color:       $black-color;
 $on-small-palm:    550px;
 $on-palm:          650px;
 $on-laptop:        800px;
-$max-page-size:    900px;
+$max-page-size:    1080px;
 
 
 

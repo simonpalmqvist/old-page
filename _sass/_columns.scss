@@ -28,6 +28,12 @@
             @include calc-width(50%, $half-spacing-unit);
         }
 
+        @include media-query($on-small-palm) {
+            &.mobile.col-1-4 {
+                @include calc-width(50%, $half-spacing-unit);
+            }
+        }
+
         &:not(.mobile) {
             @include media-query($on-laptop) {
                 &.col-1-3,
