@@ -59,4 +59,6 @@ $(window).load(function() {
 
     moveFooter();
 
+    $(window).resize(moveFooter);
+
 });
