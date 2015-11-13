@@ -38,6 +38,35 @@
     font-size: 24px;
 }
 
+.page-message {
+    position: absolute;
+    top: 30%;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    text-align: center;
+
+    @include media-query($on-small-palm) {
+        padding-top: $spacing-unit * 2;
+        padding-bottom: $spacing-unit * 2;
+        position: static;
+
+    }
+
+
+
+    h1, p {
+        font-family: $title-font-family;
+        letter-spacing: 3px;
+        color: $white-color;
+
+        p {
+            font-size: 20px;
+        }
+    }
+
+}
+
 
 
 /**
