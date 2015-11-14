@@ -10,6 +10,7 @@
 
     img {
         max-height: 400px;
+        opacity: 0.9;
     }
 }
 
@@ -34,9 +35,8 @@
 
     &:hover,
     &:focus {
-        /*color:transparent;*/
         color: $white-color;
-        background-color: rgba(0,0,0, 0.6);
+        background-color: rgba($black-color, 0.6);
 
 
     }
@@ -63,15 +63,13 @@
     height:400px;
     position:relative;
     overflow: hidden;
+    text-align: center;
 
     img {
         margin-top: -400px;
         display: inline-block;
         max-height: 800px;
+        opacity: 0.9;
 
-    }
-
-    @include media-query($on-small-palm) {
-        text-align: center;
     }
 }

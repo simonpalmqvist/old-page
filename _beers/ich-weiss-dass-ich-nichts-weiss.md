@@ -8,7 +8,7 @@ author: simonpalmqvist
 ---
 
 ###Description
-To be continued
+Still lagering on bottle, description will come soon.
 
 ###About
 __ABV__ 5,2% • __IBU__ 15 • __EBC__ 7

@@ -20,7 +20,7 @@ $brand-color:      #38a3d1;
 $black-color:      #2f2f2f;
 $white-color:      #fefefe;
 $grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
+$grey-color-light: lighten($grey-color, 44%);
 $grey-color-dark:  darken($grey-color, 25%);
 
 $text-color:       $black-color;
@@ -50,7 +50,7 @@ $max-page-size:    1080px;
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
     url("https://fonts.googleapis.com/css?family=Indie+Flower"),
-    url('https://fonts.googleapis.com/css?family=Montserrat:400,700'),
+    url("https://fonts.googleapis.com/css?family=Montserrat:400,700"),
     "base",
     "columns",
     "paper",
