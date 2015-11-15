@@ -1,8 +1,9 @@
 ---
 layout: post
-title:  "Beer collection"
-date:   2015-11-11 11:50:00
-type: "article"
+title: Beer collection
+date: 2015-11-11 11:50:00
+description: Adding a collection in Jekyll.
+type: article
 author: simonpalmqvist
 categories: programming
 ---
