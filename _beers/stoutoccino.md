@@ -8,7 +8,8 @@ author: simonpalmqvist
 ---
 
 ###Description
-To be continued
+A mix of a Coffee Stout and a Milk Stout. The combination of lactose and espresso beans give this beer
+a creamy and sweet cappuccino taste.
 
 ###About
 __ABV__ 5,3% • __IBU__ 48 • __EBC__ 90

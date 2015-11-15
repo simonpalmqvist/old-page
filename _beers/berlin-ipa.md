@@ -8,7 +8,7 @@ author: simonpalmqvist
 ---
 
 ###Description
-To be continued
+A fruity and flowery india pale ale with a really bitter finish. Hopped with Cascade and Amarillo.
 
 ###About
 __ABV__ 7,3% • __IBU__ 74 • __EBC__ 17
