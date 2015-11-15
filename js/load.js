@@ -1,3 +1,4 @@
+//Disqus part
 function loadDiscuss() {
     var disqus_config = function () {
         //var disqus_developer = 1;
@@ -16,6 +17,7 @@ function loadDiscuss() {
     })();
 };
 
+//Functions to move footer to the bottom of the page, used on dom mutation, window resize and load.
 function moveFooterAfter(mutation) {
     $(mutation[0].addedNodes[0]).load(moveFooter);
 }
@@ -43,8 +45,6 @@ function moveFooter() {
     }
 }
 
-
-
 $(window).load(function() {
     if ($("#disqus_thread").length) {
         loadDiscuss();
@@ -62,3 +62,12 @@ $(window).load(function() {
     $(window).resize(moveFooter);
 
 });
+
+//Google Analytics part
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-70155816-1', 'auto');
+ga('send', 'pageview');
