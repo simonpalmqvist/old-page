@@ -15,29 +15,33 @@ function loadDiscuss() {
         (d.head || d.body).appendChild(s);
 
     })();
-};
+}
 
 //Functions to move footer to the bottom of the page, used on dom mutation, window resize and load.
-function moveFooterAfter(mutation) {
-    $(mutation[0].addedNodes[0]).load(moveFooter);
+function moveFooterAfter(mutations) {
+    mutations.forEach(function(mutation) {
+        Array.prototype.forEach.call(mutation.addedNodes, function(node) {
+            node.addEventListener("load", moveFooter);
+        });
+    });
 }
 
 function moveFooter() {
-    var body = $("body");
-    var footer = $(".site-footer");
-    var bodyHeight = body.height();
-    var windowHeight = $(window).height();
+    var body = document.body;
+    var footer = document.querySelector(".site-footer");
+    var bodyHeight = body.clientHeight;
+    var windowHeight = window.innerHeight;
 
-    if (footer.hasClass("move")) {
-        bodyHeight += footer.outerHeight();
+    if (footer.classList.contains("move")) {
+        bodyHeight += footer.clientHeight;
     }
 
     if ( bodyHeight < windowHeight) {
-        body.addClass("fullscreen");
-        footer.addClass("move");
+        body.classList.add("fullscreen");
+        footer.classList.add("move");
     } else if (bodyHeight > windowHeight) {
-        body.removeClass("fullscreen");
-        footer.removeClass("move");
+        body.classList.remove("fullscreen");
+        footer.classList.remove("move");
 
         if(this.constructor === MutationObserver) {
             this.disconnect();
@@ -45,9 +49,14 @@ function moveFooter() {
     }
 }
 
-$(window).load(function() {
-    if ($("#disqus_thread").length) {
+window.addEventListener("load", function() {
+    var commentDiv = document.querySelector("#disqus_thread");
+    moveFooter();
+
+    if (commentDiv) {
         loadDiscuss();
+
+
         var observer = new MutationObserver(moveFooterAfter);
 
         var observerConfig = {
@@ -56,12 +65,9 @@ $(window).load(function() {
 
         observer.observe(document.body, observerConfig);
     }
-
-    moveFooter();
-
-    $(window).resize(moveFooter);
-
 });
+
+window.addEventListener("resize", moveFooter);
 
 //Google Analytics part
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
